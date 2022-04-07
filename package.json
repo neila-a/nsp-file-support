@@ -1,0 +1,59 @@
+{
+    "name": "nsp-file-support",
+    "displayName": "NSP File Support",
+    "description": "NSP文件支持",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.64.1"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "nsp",
+                "aliases": [
+                    "Node Server Pages",
+                    "nsp"
+                ],
+                "extensions": [
+                    ".nsp"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "nsp",
+                "scopeName": "source.nsp",
+                "path": "./syntaxes/nsp.tmLanguage.json"
+            },
+            {
+                "language": "nsp",
+                "scopeName": "text.html.nsp",
+                "path": "./syntaxes/html.tmLanguage.json",
+                "embeddedLanguages": {
+                    "text.html": "html",
+                    "source.nsp": "nsp",
+                    "source.sql": "sql",
+                    "text.xml": "xml",
+                    "source.js": "javascript",
+                    "source.json": "json",
+                    "source.css": "css"
+                }
+            }
+        ],
+        "snippets": [
+            {
+                "language": "nsp",
+                "path": "snippets/javascript-nsp.code-snippets"
+            }
+        ]
+    },
+    "dependencies": {
+        "vsce": "^2.7.0"
+    },
+    "publisher": "neila",
+    "icon": "nsp.png"
+}

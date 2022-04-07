@@ -1,0 +1,2 @@
+- `Initial release` by `neila` (2022-04-05)
+- `v1.0.0-pre1` by `neila` (2022-04-06)
